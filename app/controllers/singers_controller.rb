@@ -29,6 +29,12 @@ class SingersController < ApplicationController
     redirect_to singers_path
   end
 
+  def destroy
+    @singer = Singer.find(params[:id]).delete
+
+    redirect_to singers_path
+  end
+
 private
 
 def singer_params
