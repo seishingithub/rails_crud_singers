@@ -8,14 +8,6 @@
     <%= f.text_field :song %>
   </p>
   <p>
-    <%= f.submit 'Add singer' %>
+    <%= f.submit 'Update singer' %>
   </p>
-<% end %>
-
-<% @singers.each do |singer| %>
-<ul>
-  <li>
-    <%= link_to "#{singer.name}", singer_path(singer) %>, <%= singer.song %>
-  </li>
-</ul>
 <% end %>

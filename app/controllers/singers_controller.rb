@@ -15,7 +15,18 @@ class SingersController < ApplicationController
   end
 
   def show
-    @singer = singer.find(params[:id])
+    @singer = Singer.find(params[:id])
+  end
+
+  def edit
+    @singer = Singer.find(params[:id])
+  end
+
+  def update
+    @singer = Singer.find(params[:id])
+    @singer.update_attributes!(singer_params)
+
+    redirect_to singers_path
   end
 
 private
